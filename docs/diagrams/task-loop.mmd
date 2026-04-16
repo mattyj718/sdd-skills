@@ -1,0 +1,12 @@
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#16213e', 'primaryTextColor': '#e0e0e0', 'primaryBorderColor': '#00d4ff', 'lineColor': '#00d4ff', 'secondaryColor': '#1a1a2e', 'tertiaryColor': '#2a2a4a', 'edgeLabelBackground': '#1a1a2e', 'fontSize': '13px' }}}%%
+graph LR
+    A["<b>Implementer</b><br/>red/green TDD<br/>commit + self-review"] --> B["<b>Spec Reviewer</b><br/>Built what was<br/>requested?"]
+    B -->|"Issues"| A
+    B -->|"Pass"| C["<b>Quality Reviewer</b><br/>Well-built?"]
+    C -->|"Issues"| A
+    C -->|"Pass"| D["Task<br/>Complete"]
+
+    style A fill:#16213e,stroke:#00d4ff,stroke-width:2px,color:#e0e0e0
+    style B fill:#16213e,stroke:#ff6b6b,stroke-width:2px,color:#e0e0e0
+    style C fill:#16213e,stroke:#ff6b6b,stroke-width:2px,color:#e0e0e0
+    style D fill:#16213e,stroke:#7fdbca,stroke-width:2px,color:#7fdbca

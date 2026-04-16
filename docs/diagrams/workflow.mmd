@@ -1,0 +1,17 @@
+%%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#16213e', 'primaryTextColor': '#e0e0e0', 'primaryBorderColor': '#00d4ff', 'lineColor': '#00d4ff', 'secondaryColor': '#1a1a2e', 'tertiaryColor': '#2a2a4a', 'edgeLabelBackground': '#1a1a2e', 'fontSize': '14px' }}}%%
+graph LR
+    A["<b>/brainstorming</b><br/>Design spec"] --> B["<b>/writing-plans</b><br/>TDD plan"]
+    B --> C{"Execution<br/>mode"}
+    C -->|"Same session"| D["<b>/subagent-driven-dev</b><br/>Fresh agent per task"]
+    C -->|"Separate session"| E["<b>/executing-plans</b><br/>Batch mode"]
+    D --> F["<b>/code-review</b>"]
+    E --> F
+    F --> G["<b>/finishing-branch</b><br/>Merge / PR / Discard"]
+
+    style A fill:#16213e,stroke:#00d4ff,stroke-width:2px,color:#e0e0e0
+    style B fill:#16213e,stroke:#00d4ff,stroke-width:2px,color:#e0e0e0
+    style C fill:#2a2a4a,stroke:#ffd93d,stroke-width:2px,color:#ffd93d
+    style D fill:#16213e,stroke:#7fdbca,stroke-width:2px,color:#e0e0e0
+    style E fill:#16213e,stroke:#7fdbca,stroke-width:2px,color:#e0e0e0
+    style F fill:#16213e,stroke:#ff6b6b,stroke-width:2px,color:#e0e0e0
+    style G fill:#16213e,stroke:#00d4ff,stroke-width:2px,color:#e0e0e0
